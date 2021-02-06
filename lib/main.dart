@@ -21,15 +21,6 @@ class _HomeState extends State<Home> {
   TextEditingController alturaController = TextEditingController();
   GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   String _textInfo = "";
-  void _resetCampos() {
-    _formKey.currentState.reset();
-    pesoController.clear();
-    alturaController.clear();
-    setState(() {
-      _textInfo = "";
-    });
-  }
-
   void _calcular() {
     setState(() {
       double peso = double.parse(pesoController.text);
